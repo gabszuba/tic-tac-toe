@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+    --font:  'Permanent Marker', cursive;
+    --color-base-bg: #edeec0;
+    --color-base-text: #453119;
+    --color-btn-bg: #D44130;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--color-base-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem;
+    text-align: center;
+    color: var(--color-base-text)
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 350px;
+    height: 350px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #776885;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cell:nth-child(3n) {
+    border-left: #453119 solid 4px; 
+}
+
+.cell:nth-child(2), .cell:nth-child(5), .cell:nth-child(8) {
+    border-left: #453119 solid 4px; 
+}
+
+.cell:nth-child(4), .cell:nth-child(5), .cell:nth-child(6)  {
+    border-top:  #453119 solid 4px;
+    border-bottom: #453119 solid 4px;
+}
+
+.cell:hover {
+    background-color: rgb(97, 137, 133, 0.3);
+}
+
+#start-button {   
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-btn-bg);
+    color: #fff;
+    font: inherit;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+
+
