@@ -33,8 +33,6 @@ h1 {
 #game-board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 350px;
-    height: 350px;
     margin-top: 2rem;
     text-align: center;
 }
@@ -46,6 +44,8 @@ h1 {
     font-size: 3rem;
     color: #776885;
     cursor: pointer;
+    width: 120px;
+    height: 120px;
     transition: background-color 0.2s ease-in-out;
 }
 
